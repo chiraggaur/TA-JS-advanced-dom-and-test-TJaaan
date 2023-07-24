@@ -1,66 +1,45 @@
 let rootElement = document.querySelector('.container');
-let threeData = [];
 
 
-quotes.forEach((data,i) => {
-    if(i < 3){
-        threeData.push(data);
-    };
-});
-console.log(threeData);
-   // first three data
-    threeData.forEach((data) => {
-     let ul = document.createElement('ul');
-      ul.classList = 'unorderedList';
-     let li = document.createElement('li');
-     li.classList = 'listingQuote';
-     let p = document.createElement('p');
-        p.classList = 'listingAuthor';
-     li.innerHTML = data.quoteText;
-     p.innerHTML = data.quoteAuthor;
-     ul.append(li,p);
-     rootElement.append(ul);
-});
 
-// let values = quotes.forEach((data,i) => {
-//     if(i >= 3){
-// let ul = document.createElement('ul');
-// ul.classList = 'unorderedList';
-// let li = document.createElement('li');
-// li.classList = 'listingQuote';
-// let p = document.createElement('p');
-//   p.classList = 'listingAuthor';
-// li.innerHTML = data.quoteText;
-// p.innerHTML = data.quoteAuthor;
-// ul.append(li,p);
-// rootElement.append(ul);
-//     };
+let max = 3;
+let index = 0;
 
-// });
+function addquotes(){
 
-document.addEventListener('scroll', function() {
-     quotes.forEach((data,i) => {
-        if(i >= 3){
-    let ul = document.createElement('ul');
-    ul.classList = 'unorderedList';
-    let li = document.createElement('li');
-    li.classList = 'listingQuote';
-    let p = document.createElement('p');
-      p.classList = 'listingAuthor';
-    li.innerHTML = data.quoteText;
-    p.innerHTML = data.quoteAuthor;
-    ul.append(li,p);
-    rootElement.append(ul);
-        };
+    for(let i = 0; i < max; i++){
     
-    });
-  });
-  function ready() {
-    alert(`The content of the DOM is loaded`);
+        let ul = document.createElement('ul');
+        ul.classList = 'unorderedList';
+        let li = document.createElement('li');
+        li.classList = 'listingQuote';
+        let p = document.createElement('p');
+        p.classList = 'listingAuthor';
+        li.innerText = quotes[index].quoteText;
+        p.innerText = quotes[index].quoteAuthor;
+        ul.append(li,p);
+        rootElement.append(ul);
+    
+      index++;
+    }
+}
+ addquotes();
 
-    // image is not yet loaded (unless it was cached), so the size is 0x0
+document.addEventListener('scroll', ()=>{
+    let clientHeight = document.documentElement.clientHeight;
+    let scrollHeight = document.documentElement.scrollHeight;
+    let scrollTop = document.documentElement.scrollTop;
+    if(scrollTop + clientHeight >= scrollHeight && index < quotes.length){
+        addquotes();
+    }
 
-  }
+});
+//   function ready() {
+//     alert(`The content of the DOM is loaded`);
 
-  document.addEventListener("DOMContentLoaded", ready);
+//     // image is not yet loaded (unless it was cached), so the size is 0x0
+
+//   }
+
+//   document.addEventListener("DOMContentLoaded", ready);
 
