@@ -5,8 +5,6 @@ function getFullName(firstName, LastName) {
 function isPalindrome(value) {
   if (value === value.split("").reverse().join("")) {
     return "true";
-  } else {
-    return "false";
   }
 }
 
