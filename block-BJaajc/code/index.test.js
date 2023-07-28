@@ -1,4 +1,4 @@
-const {
+let {
   getFullName,
   isPalindrome,
   getCircumfrence,
