@@ -10,7 +10,11 @@ test("fullName is", () => {
 });
 
 test("palindrom test check", () => {
-  expect(isPalindrome("madam")).toBe("true");
+  expect(isPalindrome("madam")).toEqual("true");
+});
+
+test("palindrom test check", () => {
+  expect(isPalindrome("madam")).not.toEqual("false");
 });
 
 test("circumfrence of circle is ", () => {
