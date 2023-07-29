@@ -1,17 +1,15 @@
 {
-  "name": "altcampus-assignment",
+  "name": "block-bjaajc",
   "version": "1.0.0",
   "description": "",
-  "main": "",
+  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll --coverage"
   },
-  "author": "AltCampus",
-  "license": "GNU GPL V3",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "jest": "^29.6.2"
-  },
-  "dependencies": {
-    "eslint": "^8.46.0"
   }
 }
