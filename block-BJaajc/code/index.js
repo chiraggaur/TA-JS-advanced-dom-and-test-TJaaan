@@ -3,9 +3,7 @@ function getFullName(firstName, LastName) {
 }
 
 function isPalindrome(value) {
-  if (value === value.split("").reverse().join("")) {
-    return "true";
-  }
+  return value === value.split("").reverse().join("");
 }
 
 function getCircumfrence(radius) {

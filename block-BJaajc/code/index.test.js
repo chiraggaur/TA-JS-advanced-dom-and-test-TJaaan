@@ -10,7 +10,7 @@ test("fullName is", () => {
 });
 
 test("palindrom test check", () => {
-  expect(isPalindrome("madam")).toEqual("true");
+  expect(isPalindrome("madam")).toEqual(true);
 });
 
 test("palindrom test check", () => {
