@@ -21,9 +21,6 @@ test("circumfrence of circle is ", () => {
   expect(getCircumfrence(2)).toBe(12);
 });
 
-test("circumfrence of circle is ", () => {
-  expect(getCircumfrence(2)).not.toBe(10);
-});
 test("Area of circle is ", () => {
   expect(getArea(3)).toBe(28);
 });
