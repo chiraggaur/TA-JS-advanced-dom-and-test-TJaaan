@@ -8,11 +8,11 @@ FNF:4
 FNH:4
 FNDA:1,getFullName
 FNDA:2,isPalindrome
-FNDA:1,getCircumfrence
+FNDA:2,getCircumfrence
 FNDA:1,getArea
 DA:2,1
 DA:6,2
-DA:10,1
+DA:10,2
 DA:14,1
 DA:16,1
 LF:5
