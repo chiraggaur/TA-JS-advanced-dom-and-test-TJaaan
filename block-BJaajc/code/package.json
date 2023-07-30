@@ -1,15 +1,18 @@
 {
-  "name": "block-bjaajc",
+  "name": "code",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll --coverage"
+    "test": "jest --watchall"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^29.6.2"
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "jest": "^27.0.4"
   }
 }
